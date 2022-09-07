@@ -1,12 +1,27 @@
 {
   "name": "unis-icons-website",
-  "version": "0.1.0",
-  "private": true,
+  "description": "The unis-icons website",
+  "keywords": [
+    "unis-icons",
+    "website"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "git@github.com:unicorn-84/unis-icons-website.git",
+  "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
+  "bugs": {
+    "url": "https://github.com/unicorn-84/unis-icons-website/issues"
+  },
+  "homepage": "https://unicorn-84.github.io/unis-icons-website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier . -c",
+    "prepare": "husky install",
+    "cm": "cz"
   },
   "dependencies": {
     "next": "12.2.5",
@@ -17,8 +32,19 @@
     "@types/node": "18.7.15",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
+    "autoprefixer": "10.4.8",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
+    "husky": "8.0.1",
+    "postcss": "8.4.16",
+    "prettier": "2.7.1",
+    "tailwindcss": "3.1.8",
     "typescript": "4.8.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
